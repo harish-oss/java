@@ -1,23 +1,18 @@
 pipeline {
     agent any
     parameters {
+       
+
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+
         
-        choice(name: 'CHOICE', choices: ['prod', 'uat', 'sit'], description: 'Pick something')
-        
-    }
     stages {
-        stage('prod') {
-            
+        stage('Example') {
             steps {
-                checkout scm {'https://github.com/harish-oss/java.git'}
-                    }
-               stage('sit') {   
-                   steps {
-               echo "Choice: ${params.CHOICE}"
-                   }
-                   
-                   }
-               }
+               
+                echo "Choice: ${params.CHOICE}"
+
+               
             }
         }
     }
