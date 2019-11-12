@@ -1,6 +1,5 @@
-
 pipeline {
-   agent { label 'docker'  }
+    agent { label 'docker' }
          docker { image 'maven:3-alpine' }
           }
     stages {
