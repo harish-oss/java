@@ -15,6 +15,8 @@ pipeline {
                    steps {
                echo "Choice: ${params.CHOICE}"
                    }
+                   
+                   }
                }
             }
         }
