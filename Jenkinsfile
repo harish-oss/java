@@ -6,9 +6,15 @@ pipeline {
         
     }
     stages {
-        stage('Example') {
+        stage('prod') {
+            
             steps {
+                checkout scm https://github.com/harish-oss/java.git
+               stage('sit') {   
+                   steps {
                echo "Choice: ${params.CHOICE}"
+                   }
+               }
             }
         }
     }
