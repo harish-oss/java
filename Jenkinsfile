@@ -9,7 +9,7 @@ pipeline {
         stage('prod') {
             
             steps {
-                checkout scm https://github.com/harish-oss/java.git
+                checkout scm {'https://github.com/harish-oss/java.git'}
                     }
                stage('sit') {   
                    steps {
